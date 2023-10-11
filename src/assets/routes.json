@@ -1,0 +1,10 @@
+{
+    "/api/videos": "/videos",
+    "/api/users": "/users",
+    "/api/users/self": "/self",
+    "/api/videos/:videoId": "/videos/:videoId",
+    "/api/videos/:videoId/reactions": "/reactions"
+
+
+
+}

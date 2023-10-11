@@ -1,0 +1,83 @@
+{
+  "videos": [
+    {
+      "id": 1,
+      "title": "Vid3",
+      "url": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
+      "type": "video/mp4",
+      "datetime": "12/04/2018",
+      "previewUrl": "video-preview.png",
+      "users": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Video 222",
+      "url": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
+      "type": "video/mp4",
+      "datetime": "12/04/2018",
+      "previewUrl": "http://localhost:3000/images/video-preview.png",
+      "users": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Video 3",
+      "url": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
+      "type": "video/mp4",
+      "datetime": "12/04/2018",
+      "previewUrl": "http://localhost:3000/images/video-preview.png",
+      "users": [
+        1
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Video 4",
+      "url": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/Sintel.mp4",
+      "type": "video/mp4",
+      "datetime": "12/04/2018",
+      "previewUrl": "http://localhost:3000/images/video-preview.png",
+      "users": [
+        2
+      ]
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "username": "Eduard",
+      "email": "eduard@gmail.com"
+    },
+    {
+      "userId": 2,
+      "username": "Mateo",
+      "email": "mateo@gmail.com"
+    }
+  ],
+  "self": [
+    {
+      "id": 1,
+      "username": "Eduard",
+      "email": "eduard@gmail.com"
+    }
+  ],
+  "reactions": [
+    {
+      "id": 0.6101973660810467,
+      "videoId": "1",
+      "type": "star",
+      "timeframe": 0
+    },
+    {
+      "id": 0.47705268534006406,
+      "videoId": "1",
+      "type": "star",
+      "timeframe": 106.5478
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+<div class="toggle">
+    <mat-icon [ngStyle]="{'background-color': toggleId == 1 ? '#cccccc' : '', 'border-radius': '8px'}" (click)="toggleButtonGrid()" class="icon">grid_on</mat-icon>
+    <mat-icon [ngStyle]="{'background-color': toggleId == 2 ? '#cccccc' : '', 'border-radius': '8px'}" (click)="toggleButtonList()" class="icon">list</mat-icon>
+</div>
+<div [ngClass]="toggleId == 1 ? 'video_grid' : 'video_list'">
+    <div *ngFor="let video of videos" class="video" [routerLink]="['/videos', video.id]">
+        <img src="images/video-preview.png" alt="My Image">
+        <div class="title">{{ video.title }}</div>
+        <div class="video_group">
+            <div>{{ video.datetime }}</div>
+            <div class="username"><mat-icon class="person_icon">person</mat-icon>{{ user?.username }}</div>
+        </div>
+    </div>
+</div>

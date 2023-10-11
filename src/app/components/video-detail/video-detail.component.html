@@ -1,0 +1,39 @@
+<div class="container_page">
+    <div class="title">
+        <input type="text" ngModel={{video?.title}} #name (ngModelChange)="onInputChange(name.value)">
+        <button [disabled]="!isTitleChanged" *ngIf="isUserOwner" [ngStyle]="{'background-color': isTitleChanged ? '#353392' : '#c2c2de'}" (click)="saveTitle(name.value)">Save</button>
+    </div>
+
+    <div class="video">
+        <video #myVideo src={{video?.url}} controls (timeupdate)="onVideoTimeUpdate($event)"> 
+            The browser does not support videos. 
+        </video> 
+    </div>
+
+    <div class="buttons">
+        <div class="left_side">
+            <button (click)="snapshotVideo()"><mat-icon>camera_alt</mat-icon>Snapshot</button>
+            <button (click)="starVideo()"><mat-icon>star</mat-icon><div style="width: 60%;">Star</div></button>
+        </div>
+        <div class="right_side">
+            <div class="username"><mat-icon class="person_icon">person</mat-icon>{{ user?.username }}</div>
+        </div>
+    </div>
+    <div class="reaction">
+        <div class="reaction_title">Reaction</div>
+        <div class="reaction_list" *ngFor="let reaction$ of reactions" (click)="reactionTimeframe(reaction$)">
+            <div style="color: #8d8d8d;" *ngIf="reaction$?.type == 'snapshot'">
+                <mat-icon>camera_alt</mat-icon>
+            </div>
+            <div style="color: #8d8d8d;" *ngIf="reaction$?.type == 'star'">
+                <mat-icon>star</mat-icon>
+            </div>
+            <div>{{ reaction$.timeframe | secondsToTime }}</div>
+            <div style="color: #969696;" *ngIf="reaction$?.type == 'snapshot'">{{user?.username}} created a {{reaction$?.type}}   ({{video?.datetime}})</div>
+            <div style="color: #969696;" *ngIf="reaction$?.type == 'star'">{{user?.username}} starred the video   ({{video?.datetime}})</div>
+            <div style="display: flex; justify-content: end;">        
+                <img src="images/video-preview.png" alt="My Image">
+            </div>
+        </div>
+    </div>
+</div>

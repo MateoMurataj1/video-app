@@ -1,0 +1,93 @@
+.container_page{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 25%;
+    padding-right: 25%;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    gap: 20px;
+    .title{
+        display: flex;
+        width: 100%;
+        gap: 20px;
+        input{
+            width: 90%;
+            height: 30px;
+            border-radius: 6px;
+            border: 1px solid #c2c2de;
+        }
+        button{
+            color: white;
+            background-color: #c2c2de;
+            border: none;
+            border-radius: 6px;
+            width: 10%;
+            cursor: pointer;
+        }
+    }
+    .video{
+        width: 100%;
+        video{
+            width: 100%;
+        }
+    }
+    .buttons{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        height: 30px;
+        .left_side{
+            display: flex;
+            gap: 20px;
+            button{
+                display: flex;
+                align-items: center;
+                width: 110px;
+                background-color: white;
+                border: 1px solid #c2c2de;
+                border-radius: 6px;
+                cursor: pointer;
+                mat-icon{
+                    transform: scale(0.7);
+                }
+            }
+            button:hover{
+                border: 1px solid black;
+            }
+        }
+        .right_side{
+            .username{
+                display: flex;
+                align-items: center;
+                gap: 5px;
+                .person_icon{
+                    border: 1px solid #8d8d8d;
+                    border-radius: 50%;
+                }
+            }
+        }
+    }
+    .reaction{
+        width: 100%;
+        .reaction_title{
+            text-align: start;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+        .reaction_list{
+            font-size: 12px;
+            display: grid;
+            align-items: center;
+            grid-template-columns: repeat(4, 15% 15% 40% 30%);
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border-radius: 6px;
+        }
+        .reaction_list:hover{
+            background-color: #efefef;
+            cursor: pointer;
+        }
+    }
+}   
